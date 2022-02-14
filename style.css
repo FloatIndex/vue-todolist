@@ -125,6 +125,6 @@ ul li span:hover {
     cursor: default;
 }
 
-ul li span.line-through {
+ul li span.done {
     text-decoration: line-through;
 }

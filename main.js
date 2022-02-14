@@ -26,11 +26,14 @@ const app = new Vue (
                 }
             ]
         },
+        mounted() {
+            this.$nextTick(() => this.$refs.input.focus());
+        },
         methods: {
             addTodo(newTodo) {
-                if(newTodo != '') {
+                if(newTodo.trim().length > 0) {
                     const todo = {
-                        text: newTodo,
+                        text: newTodo.trim(),
                         done: false
                     }
                     this.todos.push(todo);
@@ -44,9 +47,7 @@ const app = new Vue (
                 this.todos[index].done = !this.todos[index].done;
             },
             /*
-            mounted() {
-                this.$nextTick(() => this.$refs.input.focus());
-            }
+            
             */
         }
     }

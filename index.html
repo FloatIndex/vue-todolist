@@ -32,15 +32,14 @@
     
             <ul>
                 <li v-for="(todo, index) in todos">
+                    <!--
+                        due possibili sintassi per gestire l'if di v-bind:
+                        1. todo.done ? 'done' : ''      (operatore ternario)
+                        2. {'done': todo.done}
+                    -->
                     <span
-                        v-if="todo.done"
                         @click="doneTodo(index)"
-                        class="line-through">
-                        {{todo.text}}
-                    </span>
-                    <span
-                        v-else
-                        @click="doneTodo(index)">
+                        v-bind:class="{'done': todo.done}" >
                         {{todo.text}}
                     </span>
                     <i @click="removeTodo(index)" class="fa-solid fa-xmark"></i>
