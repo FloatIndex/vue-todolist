@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: #C98686;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 80px;
+    color: #FFF4EC;
+    border-bottom: 1px solid #B47878;
+    box-shadow: 3px 3px 7px #B96464;
+}
+
+header h1 {
+    text-shadow: 3px 4px 1px rgba(0,0,0,0.3);
+}
+
+header h1:hover {
+    cursor: default;
+}
+
+main {
+    background-color: #FFF4EC;
+}
+
+.container {
+    width: 60%;
+    height: calc(100vh - 80px);
+    padding-top: 60px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+
+/* INPUT + BUTTON */
+#new-todo, #add-todo {
+    height: 40px;
+    border-radius: 10px;
+    background-color: #FFF4EC;
+    border-color: #C98686;
+}
+
+#new-todo {
+    width: 300px;
+    padding: 0px 20px;
+    margin-right: 20px;
+    color: #785050;
+}
+
+#new-todo::placeholder {
+    color: #C98686;
+}
+
+#new-todo:focus {
+    outline: none;
+}
+
+#add-todo {
+    width: 80px;
+    color: #C98686;
+}
+
+#add-todo:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* LISTA */
+ul {
+    max-height: calc(100% - 160px);
+    min-height: 100px;
+    overflow-y: scroll;
+    list-style-type: none;
+    text-align: left;
+    background-color: #F2B880;
+    margin-top: 50px;
+    padding: 20px 0px;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 7px #B96464; */
+    box-shadow: 2px 2px 7px 1px rgba(185, 100, 100, 0.7);
+}
+
+ul li {
+    line-height: 20px;
+    padding: 7px 40px 7px 20px;
+    color: #FFF4EC;
+    word-wrap: break-word;
+    position: relative;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+ul li:hover {
+    background-color: #FFF4EC;
+    color: #C98686;
+    border-radius: 3px;
+}
+
+ul li i {
+    float: right;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    padding: 5px;
+    margin: 0px 10px;
+    font-size: 1.2rem;
+}
+
+ul li i:hover {
+    cursor: pointer;
+}
+
+ul li span:hover {
+    cursor: default;
+}
+
+ul li span.line-through {
+    text-decoration: line-through;
+}
